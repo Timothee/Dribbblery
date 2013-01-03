@@ -21,8 +21,8 @@
 		<script type="text/template" id="shot-template">
 			<img src="<%- image_teaser_url %>" class="shot_thumb"/>
 			<div class="metadata">
-				<span class="likes"><img src="star.png"/><%- likes_count %> likes</span>
-				<span class="comments"><img src="comment.png"/><%- comments_count %> comments</span>
+				<span class="likes"><img src="star.png"/><%- likes_count %> like<% if (likes_count != 1) { %>s<% } %></span>
+				<span class="comments"><img src="comment.png"/><%- comments_count %> comment<% if (comments_count != 1) { %>s<% } %></span>
 			</div>
 		</script>
 	</body>
