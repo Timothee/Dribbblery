@@ -19,9 +19,11 @@
 			<div id="shots">&nbsp;</div>
 		</div>
 		<script type="text/template" id="shot-template">
-			<img src="<%- image_teaser_url %>"/>
-			<span class="likes"><img src="star.png"/><%- likes_count %> likes</span>
-			<span class="comments"><img src="comment.png"/><%- comments_count %> comments</span>
+			<img src="<%- image_teaser_url %>" class="shot_thumb"/>
+			<div class="metadata">
+				<span class="likes"><img src="star.png"/><%- likes_count %> likes</span>
+				<span class="comments"><img src="comment.png"/><%- comments_count %> comments</span>
+			</div>
 		</script>
 	</body>
 </html>

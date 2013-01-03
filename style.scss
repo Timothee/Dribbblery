@@ -1,5 +1,7 @@
+$body-background-color: #f0f0f0;
+$shadow-color: rgba(35, 35, 35, 0.5);
 body {
-	background-color: #f0f0f0;
+	background-color: $body-background-color;
 	color: #333;
 	padding: 0px;
 	margin: 0px;
@@ -16,7 +18,7 @@ body {
 		$background-color-selected: #44a;
 		background-color: $background-color;
 		color: $header-color;
-		box-shadow: 0px 8px 14px 0px rgba(35,35,35,0.5);
+		box-shadow: 0px 8px 14px 0px $shadow-color;
 		
 		ul {
 			list-style-type: none;
@@ -46,17 +48,24 @@ body {
 	}
 
 	#shots {
-		margin: 20px auto;
+		margin: 20px auto 50px;
 		width: 80%;
 		
 		.shot {
+			background-color: lighten($body-background-color, 4%);
 			border-radius: 15px;
-			border: 1px solid #333;
+			border: 1px solid darken($body-background-color, 20%);
 			float: left;
-			margin: 20px;
+			margin: 10px 20px 10px 20px;
+			box-shadow: 0px 5px 5px $shadow-color;
 
-			img {
+			img.shot_thumb {
 				margin: 10px;
+				border: 1px solid darken($body-background-color, 10%);
+				border-radius: 2px;
+			}
+			.metadata img {
+				margin: 5px 10px;
 			}
 		}
 	}
