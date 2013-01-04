@@ -14,10 +14,11 @@ body {
     box-shadow: 0px 8px 14px 0px rgba(35, 35, 35, 0.5);
     width: 100%;
     position: fixed;
-    top: 20px;
+    top: 0px;
     z-index: 10; }
     #container #header ul {
-      list-style-type: none; }
+      list-style-type: none;
+      margin: 0px auto; }
       #container #header ul li {
         border-radius: 25px;
         border: 2px solid #f0f0f0;
@@ -35,7 +36,7 @@ body {
         color: #333355;
         background-color: #f0f0f0; }
   #container #shots {
-    margin: 120px auto 50px;
+    margin: 80px auto 50px;
     width: 80%;
     max-width: 800px;
     position: relative; }

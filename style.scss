@@ -21,11 +21,12 @@ body {
 		box-shadow: 0px 8px 14px 0px $shadow-color;
 		width: 100%;
 		position: fixed;
-		top: 20px;
+		top: 0px;
 		z-index: 10;
 		
 		ul {
 			list-style-type: none;
+			margin: 0px auto;
 
 			$li-height: 25px;
 			li {
@@ -51,7 +52,7 @@ body {
 	}
 
 	#shots {
-		margin: 120px auto 50px;
+		margin: 80px auto 50px;
 		width: 80%;
 		max-width: 800px;
 		position: relative;
