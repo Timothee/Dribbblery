@@ -39,7 +39,6 @@ body {
 				background-color: $background-color-selected;
 			}
 			li:hover, li.selected:hover {
-				text-decoration: underline;
 				cursor: pointer;
 				color: $background-color;
 				background-color: $header-color;
@@ -50,22 +49,40 @@ body {
 	#shots {
 		margin: 20px auto 50px;
 		width: 80%;
+		max-width: 800px;
+		position: relative;
 		
+		button {
+			position: absolute;
+			bottom: -40px;
+		}
+
 		.shot {
 			background-color: lighten($body-background-color, 4%);
 			border-radius: 15px;
 			border: 1px solid darken($body-background-color, 20%);
-			float: left;
+			width: 224px;
+			display: inline-block;
 			margin: 10px 20px 10px 20px;
 			box-shadow: 0px 5px 5px $shadow-color;
 
 			img.shot_thumb {
+				height: 150px;
+				width: 200px;
 				margin: 10px;
 				border: 1px solid darken($body-background-color, 10%);
 				border-radius: 2px;
 			}
-			.metadata img {
-				margin: 5px 10px;
+			.metadata {
+				font-size: 0.9em;
+				height: 23px;
+				line-height: 23px;
+				margin: 0px 0px 5px 0px;
+				img {
+					position: relative;
+					top: 3px;
+					margin: 0px 6px;
+				}
 			}
 		}
 	}

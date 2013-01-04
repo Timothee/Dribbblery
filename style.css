@@ -27,23 +27,37 @@ body {
       #container #header ul li.selected {
         background-color: #4444aa; }
       #container #header ul li:hover, #container #header ul li.selected:hover {
-        text-decoration: underline;
         cursor: pointer;
         color: #333355;
         background-color: #f0f0f0; }
   #container #shots {
     margin: 20px auto 50px;
-    width: 80%; }
+    width: 80%;
+    max-width: 800px;
+    position: relative; }
+    #container #shots button {
+      position: absolute;
+      bottom: -40px; }
     #container #shots .shot {
       background-color: #fafafa;
       border-radius: 15px;
       border: 1px solid #bdbdbd;
-      float: left;
+      width: 224px;
+      display: inline-block;
       margin: 10px 20px 10px 20px;
       box-shadow: 0px 5px 5px rgba(35, 35, 35, 0.5); }
       #container #shots .shot img.shot_thumb {
+        height: 150px;
+        width: 200px;
         margin: 10px;
         border: 1px solid #d6d6d6;
         border-radius: 2px; }
-      #container #shots .shot .metadata img {
-        margin: 5px 10px; }
+      #container #shots .shot .metadata {
+        font-size: 0.9em;
+        height: 23px;
+        line-height: 23px;
+        margin: 0px 0px 5px 0px; }
+        #container #shots .shot .metadata img {
+          position: relative;
+          top: 3px;
+          margin: 0px 6px; }

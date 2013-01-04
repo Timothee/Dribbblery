@@ -37,6 +37,9 @@ $(function() {
 	var AppView = Backbone.View.extend({
 		el: $("#container"),
 		
+		events: {
+			"click #loadmore": "loadMore"
+		},
 		initialize: function() {
 			this.listenTo(Shots, 'add', this.addOne);
 			this.listenTo(Shots, 'reset', this.addAll);
@@ -55,6 +58,10 @@ $(function() {
 		
 		addAll: function() {
 			Shots.each(this.addOne);
+		},
+		
+		loadMore: function() {
+			Shots.fetch();
 		}
 	});
 			
