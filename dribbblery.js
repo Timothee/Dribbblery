@@ -46,31 +46,16 @@ $(function() {
 			"click #header li": "changeCurrentList"
 		},
 		initialize: function() {
-//			_.each(this.lists, function(list) {
-//				list.on('add', this.addOne);
-//				list.on('reset', this.addAll);
-//				list.on('all', this.render);
-//				if (list == this.currentList) {
-//					list.fetch();
-//				} else {
-//					list.fetch({silent: true});
-//				}
-//			}, this);
-			
-			
-			
-			this.listenTo(PopularShots, 'add', this.addOne);
-			this.listenTo(PopularShots, 'reset', this.addAll);
-			this.listenTo(PopularShots, 'all', this.render);
-			this.listenTo(DebutsShots, 'add', this.addOne);
-			this.listenTo(DebutsShots, 'reset', this.addAll);
-			this.listenTo(DebutsShots, 'all', this.render);
-			this.listenTo(EveryoneShots, 'add', this.addOne);
-			this.listenTo(EveryoneShots, 'reset', this.addAll);
-			this.listenTo(EveryoneShots, 'all', this.render);
-			PopularShots.fetch();
-			DebutsShots.fetch({silent: true});
-			EveryoneShots.fetch({silent: true});
+			_.each(this.lists, function(list) {
+				this.listenTo(list, 'add', this.addOne);
+				this.listenTo(list, 'reset', this.addAll);
+				this.listenTo(list, 'all', this.render);
+				if (list == this.currentList) {
+					list.fetch();
+				} else {
+					list.fetch({silent: true});
+				}
+			}, this);
 		},
 		
 		render: function(el) {
