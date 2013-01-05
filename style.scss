@@ -57,10 +57,6 @@ body {
 		max-width: 800px;
 		position: relative;
 		
-		button {
-			position: absolute;
-			bottom: -40px;
-		}
 
 		.shot {
 			background-color: lighten($body-background-color, 4%);
@@ -92,8 +88,15 @@ body {
 		}
 	}
 	#loadmore {
+		cursor: pointer;
+		color: #f0f0f0;
+		background-color: rgba(35, 35, 40, 0.5);
+		text-align: center;
+		width: 100%;
 		position: fixed;
-		bottom: 20px;
-		margin: 0px auto;
+		bottom: 0px;
+		width: 100%;
+		padding: 20px;
+		z-index: 10;
 	}
 }

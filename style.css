@@ -40,9 +40,6 @@ body {
     width: 80%;
     max-width: 800px;
     position: relative; }
-    #container #shots button {
-      position: absolute;
-      bottom: -40px; }
     #container #shots .shot {
       background-color: #fafafa;
       border-radius: 15px;
@@ -67,6 +64,13 @@ body {
           top: 3px;
           margin: 0px 6px; }
   #container #loadmore {
+    cursor: pointer;
+    color: #f0f0f0;
+    background-color: rgba(35, 35, 40, 0.5);
+    text-align: center;
+    width: 100%;
     position: fixed;
-    bottom: 20px;
-    margin: 0px auto; }
+    bottom: 0px;
+    width: 100%;
+    padding: 20px;
+    z-index: 10; }
